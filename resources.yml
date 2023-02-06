@@ -37,7 +37,7 @@ cognitoUserPoolWebclient:
       - http://localhost:3000
 
 # User pool domain
-cognitoUserPoolDoamin:
+cognitoUserPoolDomain:
   Type: AWS::Cognito::UserPoolDomain
   Properties:
     UserPoolId: !Ref cognitoUserPool
