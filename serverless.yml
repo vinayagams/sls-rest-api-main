@@ -59,7 +59,7 @@ functions:
           method: delete
           path: notes/{id}
           authorizer: authorizer
-
+/*
   getAllNotes:
     handler: handler.getAllNotes
     environment:
@@ -77,7 +77,7 @@ functions:
             name: userpool_authorizer
             type: COGNITO_USER_POOLS
             Resource: !GetAtt cognitoUserPool.Arn
-
+*/
 plugins:
   - serverless-iam-roles-per-function
 
