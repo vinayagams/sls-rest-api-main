@@ -15,7 +15,7 @@ notesTable:
 cognitoUserPool:
   Type: AWS::Cognito::UserPool
   Properties:
-    UserPoolName: Notes-${self:provider.stage}
+    UserPoolName: Vinay-${self:provider.stage}
 
 # User pool web client
 cognitoUserPoolWebclient:
