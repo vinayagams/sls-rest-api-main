@@ -59,25 +59,25 @@ functions:
           method: delete
           path: notes/{id}
           authorizer: authorizer
-/*
-  getAllNotes:
-    handler: handler.getAllNotes
-    environment:
-      NOTES_TABLE_NAME: !Ref notesTable
-    iamRoleStatements:
-      - Effect: Allow
-        Action:
-          - dynamodb:Scan
-        Resource: !GetAtt notesTable.Arn
-    events:
-      - http:
-          method: get
-          path: notes
-          authorizer:
-            name: userpool_authorizer
-            type: COGNITO_USER_POOLS
-            Resource: !GetAtt cognitoUserPool.Arn
-*/
+          
+#  getAllNotes:
+#    handler: handler.getAllNotes
+#    environment:
+#      NOTES_TABLE_NAME: !Ref notesTable
+#    iamRoleStatements:
+#      - Effect: Allow
+#        Action:
+#          - dynamodb:Scan
+#        Resource: !GetAtt notesTable.Arn
+#    events:
+#      - http:
+#          method: get
+#          path: notes
+#          authorizer:
+#            name: userpool_authorizer
+#            type: COGNITO_USER_POOLS
+#            Resource: !GetAtt cognitoUserPool.Arn
+
 plugins:
   - serverless-iam-roles-per-function
 
